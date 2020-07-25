@@ -1,11 +1,12 @@
 public class codass{
 public static void main( String []  args)
 {
-  PrintIncreasingNumber(5);
+  pintIncreasingNumber(5);
+  printDecreasingNumber(5);
     
 }
   public class void printIncreasingNumber(int n)
-  {
+  
     if(n==0)
     {
       return;
@@ -15,5 +16,19 @@ public static void main( String []  args)
     System.out.println(n);
     
   }
+
+  public static void printDecreasingNumber(int n)
+  {
+    if(n==0)
+    {
+      return 0;
+    }
+    
+    System.out.println(n);
+    printDecreasingNumber(n-1);
+    
+    
+  }
+  
   
 }
