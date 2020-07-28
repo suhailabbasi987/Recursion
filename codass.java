@@ -3,6 +3,8 @@ public static void main( String []  args)
 {
   pintIncreasingNumber(5);
   printDecreasingNumber(5);
+  printIncreasingDecreasing(5);
+  
     
 }
   public class void printIncreasingNumber(int n)
@@ -29,6 +31,20 @@ public static void main( String []  args)
     
     
   }
+
+public static void printIncrasingDecreasing(int n)
+{
+  
+  if(n==0)
+  {
+    return;
+  }
+  System.out.println(n);
+  printIncreasingDecreasing(n-1);
+  System.out.println(n);
+}
+
+
   
   
 }
