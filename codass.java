@@ -44,7 +44,34 @@ public static void printIncrasingDecreasing(int n)
   System.out.println(n);
 }
 
-
+public static int factorial(int n)
+{
+  if(n==0 || n==1)
+  {
+    return 1;
+  }
+  int ans=factorial(n-1);
+  ans=ans*n;
+  return ans;
   
+}
+
+public static int Power(int x,int n)
+{
+  if(x==0)
+  {
+    return 1;
+  }
+  if(x==1)
+  {
+    return n;
+  }
+  
+int ans=power(n,x-1);
+ans=ans*n;
+  return ans;
+}
+
+
   
 }
