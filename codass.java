@@ -4,6 +4,7 @@ public static void main( String []  args)
   pintIncreasingNumber(5);
   printDecreasingNumber(5);
   printIncreasingDecreasing(5);
+  towerOfHanoi("A","B","C",3);
   
     
 }
@@ -72,6 +73,17 @@ ans=ans*n;
   return ans;
 }
 
+public static void towerOfHanoi(String src, String helper,String dest,int n)
+{
+  if(n==0)
+  {
+    return ;
+  }
+  
+  towerOfHanoi(src,dest,helper,n-1);
+  System.out.println(src + "->" + dest + " moving (" + n  + "th) disc");
+  towerOfHanoi(helper,src,dest,n-1);
+}
 
   
 }
