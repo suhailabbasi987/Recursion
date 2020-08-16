@@ -9,7 +9,7 @@ public static void main( String []  args)
   printArray(arr,0);
   printReverseArray(arr,0);
   printIncDecArray(arr,0);
-  
+ System.out.println("data is "+ dataFound(arr,3,0)); 
     
 }
   public class void printIncreasingNumber(int n)
@@ -124,6 +124,51 @@ public static void printIncDecArray(int [] arr,int vidx)
   System.out.println(arr[vidx]);  // this line executed before calls 
   printIncDecArray(arr,vidx+1);   // this is call  
   System.out.println(arr[vidx]);  // this line executed after return in function
+}
+
+public static boolean dataFound(int []arr,int data,int vidx)
+{
+
+  if(arr.length == vidx)
+  {
+    return false;
+  }
+  
+  if(data == arr[vidx])
+  {
+    return true;
+  }
+  
+  boolean ans=dataFound(arr,data,vidx+1);
+  return ans;
+  
+  
+ }
+
+
+public static int firstIndex (int [] arr,int data,int vidx)
+{
+  if(vidx == arr.length)
+  {
+    return -1;
+  }
+  
+  if(data == arr[vidx])
+  {
+    return vidx;
+  }
+  
+  int ans = fisrtIndex(arr,data,vidx+1);
+  return ans;
+}
+
+public static int lastIndex(int []arr, int data,int vidx)
+{
+  if(data==)
+  
+  int ans=lastIndex(arr,data,vidx+1)
+  return ans;
+  
 }
 
 }
